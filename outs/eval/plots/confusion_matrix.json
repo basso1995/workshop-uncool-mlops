@@ -25,7 +25,7 @@
     },
     {
         "actual": "experiments",
-        "predicted": "experiments"
+        "predicted": "data-sync"
     },
     {
         "actual": "data-sync",
@@ -53,7 +53,7 @@
     },
     {
         "actual": "plots",
-        "predicted": "experiments"
+        "predicted": "data-sync"
     },
     {
         "actual": "data-sync",
