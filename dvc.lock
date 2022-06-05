@@ -79,19 +79,19 @@ stages:
           output_folder: outs/train
           metrics_folder: outs/train_metrics
           pretrained_model: MoritzLaurer/xtremedistil-l6-h256-mnli-fever-anli-ling-binary
-          epochs: 8
+          epochs: 15
     outs:
     - path: outs/train
-      md5: bed5ee360e59b98af6eb3140eb51399d.dir
+      md5: 6dd5f4fd544985fa8fc028cc7fa0d64d.dir
       size: 51985899
       nfiles: 7
     - path: outs/train_metrics
-      md5: f8ba9208bbb9c96df629b9c272feaf6a.dir
-      size: 1673
+      md5: e1754222a04a35429579a71a0044d3a0.dir
+      size: 2789
       nfiles: 10
     - path: outs/train_metrics.json
-      md5: 8acbebd96ddc20d07400e9a7a5f8d9f3
-      size: 351
+      md5: 472151f4a7bb582e5ac0233281e514ce
+      size: 353
   eval:
     cmd: python src/eval.py outs/split/val.json outs/train outs/eval
     deps:
@@ -99,7 +99,7 @@ stages:
       md5: 46caee00ff0d2a1601980742e2f24228
       size: 1262
     - path: outs/train
-      md5: bed5ee360e59b98af6eb3140eb51399d.dir
+      md5: 6dd5f4fd544985fa8fc028cc7fa0d64d.dir
       size: 51985899
       nfiles: 7
     - path: src/eval.py
@@ -116,5 +116,5 @@ stages:
         - plots
     outs:
     - path: outs/eval/plots/confusion_matrix.json
-      md5: e1aab719a029830748c294735838205e
-      size: 1260
+      md5: fe5a1001362592db6e0699e1ff68984c
+      size: 1254
